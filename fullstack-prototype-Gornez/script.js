@@ -189,6 +189,19 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// Fetch example from backend API
+function fetchBackendMessage() {
+    fetch('/api/hello')
+        .then(response => response.json())
+        .then(data => {
+            showAlert(`Backend says: ${data.message}`, 'success');
+        })
+        .catch(error => {
+            console.error('Backend fetch error:', error);
+            showAlert('Could not reach backend API.', 'danger');
+        });
+}
+
 // Show alert notification
 function showAlert(message, type = 'info') {
     const contentArea = document.getElementById('content');

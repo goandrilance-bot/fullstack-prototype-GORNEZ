@@ -1,0 +1,12 @@
+{
+  "name": "fullstack-prototype-gornez",
+  "version": "1.0.0",
+  "description": "Node.js backend for the Fullstack prototype",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
